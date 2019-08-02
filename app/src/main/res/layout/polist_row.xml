@@ -1,17 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="40dp"
+
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/row_padding_vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/row_padding_vertical">
+
+    >
+    <!--android:paddingTop="@dimen/row_padding_vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"-->
+
+
+
 
     <TextView
+        android:id="@+id/lineno"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/textview_left_top_bottom_border"
+        android:gravity="center"
+
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/receiptno"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/lineno"
+        android:background="@drawable/textview_top_bottom_border"
+        android:gravity="center"
+
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemno"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/receiptno"
+        android:background="@drawable/textview_top_bottom_border"
+        android:gravity="center"
+
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="86dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/itemno"
+        android:background="@drawable/textview_top_bottom_border"
+        android:gravity="center"
+
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Subinv"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/quantity"
+        android:background="@drawable/textview_right_top_bottom_border"
+        android:gravity="center"
+
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/scanitem"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:layout_toEndOf="@id/Subinv"
+        android:textSize="12sp"
+        android:textColor="@color/scanitem"
+        android:background="@drawable/custom_button_putaway"/>
+
+    <!-- <TextView
+        android:id="@+id/info"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_toEndOf="@id/receiptno"
+        android:paddingTop="10dp"
+       />-->
+
+    <!--<TextView
         android:id="@+id/receiptno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,6 +122,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:textColor="@color/scanitem" />
+        android:textColor="@color/scanitem" />-->
 
 </RelativeLayout>

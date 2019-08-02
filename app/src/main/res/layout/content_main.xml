@@ -9,10 +9,100 @@
     tools:showIn="@layout/activity_main"
     tools:context=".POPutAwayActivity">
 
+    <TextView
+        android:id="@+id/line_header"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Line"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+
+        android:gravity="center"
+        android:background="@drawable/textview_border"/>
+    <TextView
+        android:id="@+id/receipt_header"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Receipt#"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_toEndOf="@id/line_header"
+        android:paddingTop="10dp"
+        android:background="@drawable/textview_border"/>
+    <TextView
+        android:id="@+id/item_header"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Item"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+
+        android:layout_toEndOf="@id/receipt_header"
+        android:paddingTop="10dp"
+        android:background="@drawable/textview_border"/>
+    <TextView
+        android:id="@+id/qty_header"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Quantity"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_toEndOf="@id/item_header"
+        android:paddingTop="10dp"
+        android:background="@drawable/textview_border"/>
+    <TextView
+        android:id="@+id/sub_inv_header"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/receiptno"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="Sub-Inventory"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_toEndOf="@id/qty_header"
+        android:paddingTop="10dp"
+        android:background="@drawable/textview_border"
+        />
+
+
+    <!--<TextView
+        android:id="@+id/placeholder_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/receiptno"
+        android:layout_below="@id/line_header"
+        android:paddingTop="10dp"
+        android:background="@drawable/textview_border"
+
+        />-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:layout_marginTop="37dp"
+
+        />
+    <!--android:background="@drawable/custom_button_putaway"-->
 
 </RelativeLayout>

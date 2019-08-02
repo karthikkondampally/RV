@@ -72,10 +72,13 @@ public class POPutAwayActivity extends AppCompatActivity {
     }
 
     private void preparePOData() {
-        POListDetail polist = new POListDetail("2","1001","B","10","500D", "Scan Item");
+        POListDetail polist = new POListDetail("2","1001000","B","10","500000D", "Scan Item");
         poList.add(polist);
 
-        polist = new POListDetail("3","1001","C","1","600D","Scan Item");
+        polist = new POListDetail("3","10010000","C","1","6000000D","Scan Item");
+        poList.add(polist);
+
+        polist = new POListDetail("4","100100000000","D","5","70000000000D","Scan Item");
         poList.add(polist);
 
 

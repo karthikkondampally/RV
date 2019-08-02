@@ -14,12 +14,15 @@ public class POListAdapter extends RecyclerView.Adapter<POListAdapter.MyViewHold
     private List<POListDetail> poList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView receipt, info, scan_item;
+        public TextView line,receipt,item,qty, sub_inv, scan_item;
 
         public MyViewHolder(View view) {
             super(view);
             receipt = (TextView) view.findViewById(R.id.receiptno);
-            info = (TextView) view.findViewById(R.id.info);
+            line = (TextView) view.findViewById(R.id.lineno);
+            item = (TextView) view.findViewById(R.id.itemno);
+            qty = (TextView) view.findViewById(R.id.quantity);
+            sub_inv = (TextView) view.findViewById(R.id.Subinv);
             scan_item = (TextView) view.findViewById(R.id.scanitem);
         }
     }
@@ -40,8 +43,13 @@ public class POListAdapter extends RecyclerView.Adapter<POListAdapter.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         POListDetail polist = poList.get(position);
-        holder.receipt.setText("Receipt No: " + polist.getReceipt());
-        holder.info.setText("Sub Inv: " + polist.getSubInv() + " Line No: " + polist.getLine_no() + " Item: " + polist.getItem_num() + " Qty: " + polist.getQuantity());
+        holder.receipt.setText(polist.getReceipt());
+        holder.line.setText(polist.getLine_no());
+        holder.item.setText(polist.getItem_num());
+        holder.qty.setText(polist.getQuantity());
+        holder.sub_inv.setText(polist.getSubInv());
+
+      //  holder.info.setText("Sub Inv: " + polist.getSubInv() + " Line No: " + polist.getLine_no() + " Item: " + polist.getItem_num() + " Qty: " + polist.getQuantity());
         holder.scan_item.setText(polist.getScanItem());
     }
 
